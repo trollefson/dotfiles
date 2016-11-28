@@ -51,6 +51,8 @@ _bash_prompt_config() {
   # Expose the variables we need in prompt command
   P_USER=${USER_SYMBOL}
   P_BLUE=${BRIGHT_CYAN}
+  P_RED=${RED}
+  P_YELLOW=${BRIGHT_YELLOW}
   P_GREEN=${BRIGHT_GREEN}
   P_WHITE=${WHITE}
   P_VIOLET=${BRIGHT_VIOLET}
@@ -83,18 +85,35 @@ bash_prompt_command() {
 
   # Parse Git branch name
   P_GIT=$(parse_git_branch)
+  P_GIT_COLOR=$(parse_git_color)
 
   # Exit code
   if [[ $EXIT_CODE != 0 ]]; then
     P_EXIT+="${P_RED}✘ "
   fi
 
-  PS1="${P_WHITE}[${P_BLUE}${P_USER} ${P_VIOLET}${P_PWD}${P_GREEN}${P_GIT}${P_WHITE}]: ${P_RESET}"
+
+  PS1="${P_WHITE}[${P_BLUE}${P_USER} ${P_VIOLET}${P_PWD}${P_GIT_COLOR}${P_GIT}${P_WHITE}]: ${P_RESET}"
 }
+
 
 parse_git_branch() {
   local OUT=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ "$OUT" != "" ]; then echo " $OUT"; fi
+}
+
+parse_git_color() {
+  local git_status="$(git status 2> /dev/null)"
+
+  if [[ $git_status =~ "Changes not staged for commit" ]]; then
+    echo -e "$P_RED"
+  elif [[ $git_status =~ "Your branch is ahead of" ]]; then
+    echo -e "$P_YELLOW"
+  elif [[ $git_status =~ "nothing to commit" ]]; then
+    echo -e "$P_GREEN"
+  else
+    echo -e "$P_WHITE"
+  fi
 }
 
 _bash_prompt_config

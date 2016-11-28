@@ -19,6 +19,7 @@ apps=(
   gnu-sed --with-default-names
   grep --with-default-names
   python
+  the_silver_searcher
   tig
   tmux
   vim
