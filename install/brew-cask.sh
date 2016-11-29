@@ -9,6 +9,7 @@ brew tap caskroom/versions
 apps=(
   firefox
   flux
+  gimp
   google-chrome
   google-drive
   opera

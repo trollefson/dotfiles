@@ -14,7 +14,6 @@ apps=(
   coreutils
   cmake
   dockutil
-  gimp
   git
   git-extras
   gnu-sed --with-default-names
