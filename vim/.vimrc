@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'andviro/flake8-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " flake8-vim config
 let g:PyFlakeOnWrite = 1
@@ -61,3 +62,9 @@ map <leader>b :ls<CR>
 
 " switch buffers with leader leader
 map <leader><leader> :b#<CR>
+
+" map pane switching keys
+map <NUL>j :wincmd j<CR> 
+map <NUL>k :wincmd k<CR>
+map <NUL>h :wincmd h<CR>
+map <NUL>l :wincmd l<CR>
