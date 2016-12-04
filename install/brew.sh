@@ -13,6 +13,7 @@ apps=(
   battery
   coreutils
   cmake
+  ctags
   dockutil
   git
   git-extras
