@@ -52,6 +52,9 @@ let mapleader="\<Space>" " set leader to space
 " map silver searcher to sp
 nnoremap <leader>sp :Ag
 
+" map substitue to fr
+map <leader>fr :%s/
+
 " map nerdtree to gr
 map <leader>gr :NERDTreeToggle<CR>
 
