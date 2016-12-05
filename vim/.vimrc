@@ -16,6 +16,7 @@ Plugin 'andviro/flake8-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " flake8-vim config
 let g:PyFlakeOnWrite = 1
