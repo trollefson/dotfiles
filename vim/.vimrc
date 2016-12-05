@@ -25,9 +25,6 @@ let g:PyFlakeSigns = 1
 let g:PyFlakeMaxLineLength = 120
 let g:PyFlakeCWindow = 0
 
-" jedi-vim config
-let g:jedi#goto_command="<leader>gt"
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -62,6 +59,9 @@ map <leader>b :ls<CR>
 
 " switch buffers with leader leader
 map <leader><leader> :b#<CR>
+
+" map ctags goto functionality to gt
+map <leader>gt <C-]> 
 
 " map pane switching keys
 map <NUL>j :wincmd j<CR> 
