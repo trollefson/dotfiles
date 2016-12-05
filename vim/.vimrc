@@ -17,6 +17,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'vim-scripts/L9'
+Plugin 'vim-scripts/FuzzyFinder'
 
 " flake8-vim config
 let g:PyFlakeOnWrite = 1
@@ -72,3 +74,6 @@ map <NUL>j :wincmd j<CR>
 map <NUL>k :wincmd k<CR>
 map <NUL>h :wincmd h<CR>
 map <NUL>l :wincmd l<CR>
+
+" map fuzzy finder to ff
+map <leader>ff :FufFile 
