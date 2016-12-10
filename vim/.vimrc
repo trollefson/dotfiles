@@ -43,6 +43,7 @@ filetype indent on " load file type specific formatting
 
 set tabstop=4 " four spaces per tab when reading
 set softtabstop=4 " four spaces per tab when editing
+set shiftwidth=4 " indent command is 4 spaces
 set expandtab " tabs just create spaces according to softtabstop
 set wildmenu " GUI for autocompletes
 set showmatch " show matching opening/closing characters
