@@ -50,7 +50,8 @@ set incsearch " search as you type
 set hlsearch " highlight search matches
 set foldenable " allow folding of content
 set foldlevelstart=10 " default expanded folds
-set foldmethod=indent "fold based on identation
+set foldmethod=indent " fold based on identation
+set backspace=indent,eol,start " allow more deletions
 
 let mapleader="\<Space>" " set leader to space
 
