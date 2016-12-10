@@ -28,6 +28,9 @@ let g:PyFlakeSigns = 1
 let g:PyFlakeMaxLineLength = 120
 let g:PyFlakeCWindow = 0
 
+" Do not show call signatures
+let g:jedi#show_call_signatures = "0"
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
