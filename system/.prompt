@@ -92,8 +92,15 @@ bash_prompt_command() {
     P_EXIT+="${P_RED}✘ "
   fi
 
+  # Get virtualenv
+  if [[ $VIRTUAL_ENV != "" ]]
+    then
+        VENV="${P_WHITE}(${P_YELLOW}${VIRTUAL_ENV##*/}${P_WHITE})"
+  else
+        VENV=''
+  fi
 
-  PS1="${P_WHITE}[${P_BLUE}${P_USER} ${P_VIOLET}${P_PWD}${P_GIT_COLOR}${P_GIT}${P_WHITE}]: ${P_RESET}"
+  PS1="${VENV}${P_WHITE}[${P_BLUE}${P_USER} ${P_VIOLET}${P_PWD}${P_GIT_COLOR}${P_GIT}${P_WHITE}]: ${P_RESET}"
 }
 
 
