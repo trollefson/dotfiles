@@ -1,1 +1,2 @@
 alias postgres_start="postgres -D /usr/local/var/postgres"
+alias ls="ls -G"
