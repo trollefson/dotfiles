@@ -4,8 +4,7 @@
 
 # OS
 
-if [ "$(uname -s)" = "Darwin" ]; then
-  OS="OSX"
+if [ "$(uname -s)" = "Darwin" ]; then OS="OSX"
 else
   OS=$(uname -s)
 fi
@@ -55,3 +54,4 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
 
 export OS DOTFILES_DIR EXTRA_DIR
 export GIT_EDITOR=vim
+export LSCOLORS="gxfxcxdxbxegedabagacad"
