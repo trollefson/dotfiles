@@ -12,6 +12,7 @@ apps=(
   gimp
   google-chrome
   google-drive
+  java
   opera
   slack
   spotify
