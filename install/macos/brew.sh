@@ -19,6 +19,7 @@ apps=(
   git-extras
   gnu-sed --with-default-names
   grep --with-default-names
+  maven
   postgresql
   python
   the_silver_searcher
