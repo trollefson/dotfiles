@@ -30,6 +30,7 @@ ln -sfv "$DOTFILES_DIR/ctags/.ctags" ~
 if [ "$(uname)" == "Darwin" ]; then
   . "$DOTFILES_DIR/install/brew-cask.sh"
   ln -sfv "$DOTFILES_DIR/etc/mackup/.mackup.cfg" ~
+  export JAVA_HOME=$(/usr/libexec/java_home) 
 fi
 
 # Run tests
