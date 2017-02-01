@@ -10,6 +10,7 @@ brew upgrade
 # Install packages
 
 apps=(
+  ant
   battery
   coreutils
   cmake
