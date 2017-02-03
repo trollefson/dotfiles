@@ -55,3 +55,6 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
 export OS DOTFILES_DIR EXTRA_DIR
 export GIT_EDITOR=vim
 export LSCOLORS="gxfxcxdxbxegedabagacad"
+
+# Add git status to tmux powerline
+export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
