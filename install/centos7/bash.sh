@@ -17,6 +17,7 @@ apps=(
   postgresql
   python
   python-pip
+  redhat-lsb
   the_silver_searcher
   tig
   tmux
