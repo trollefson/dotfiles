@@ -32,6 +32,13 @@ if [ "$(uname)" == "Linux" ]; then
     mkdir -p ~/.fonts
     mv PowerlineSymbols.otf ~/.fonts/
     fc-cache -vf ~/.fonts/
+  else 
+    OS="CentOS7"
+    ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~/.bashrc
+    . "$DOTFILES_DIR/install/centos7/bash.sh"
+    . "$DOTFILES_DIR/install/centos7/npm.sh"
+    . "$DOTFILES_DIR/install/centos7/pip.sh"
+    # Set JAVA_HOME manually on CentOS7
   fi
 fi
 

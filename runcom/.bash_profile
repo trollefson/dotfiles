@@ -4,13 +4,20 @@
 # Get OS
 if [ "$(uname -s)" = "Darwin" ]; then
   OS="OSX"
+elif [ "$(lsb_release -i | cut -f 2-)" == "Ubuntu" ]; then
+  OS="Ubuntu"
 else
-  OS="$(lsb_release -i | cut -f 2-)"
+  OS="CentOS7"
 fi
 
 # Resolve DOTFILES_DIR (assuming ~/.dotfiles on distros without readlink and/or $BASH_SOURCE/$0)
 
-READLINK=$(which greadlink || which readlink)
+if [ OS == "OSX" ]; then
+    READLINK=$(which greadlink)
+else
+    READLINK=$(which readlink)
+fi
+
 CURRENT_SCRIPT=$BASH_SOURCE
 
 if [[ -n $CURRENT_SCRIPT && -x "$READLINK" ]]; then
@@ -55,4 +62,8 @@ export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 # Enable virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
+if [ OS == "Ubuntu" ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+else
+    source /usr/bin/virtualenvwrapper.sh
+fi
