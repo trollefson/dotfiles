@@ -12,7 +12,7 @@ fi
 
 # Resolve DOTFILES_DIR (assuming ~/.dotfiles on distros without readlink and/or $BASH_SOURCE/$0)
 
-if [ OS == "OSX" ]; then
+if [ "$OS" == "OSX" ]; then
     READLINK=$(which greadlink)
 else
     READLINK=$(which readlink)
