@@ -7,6 +7,7 @@ brew tap caskroom/versions
 # Install packages
 
 apps=(
+  colloquy
   firefox
   flux
   gimp
