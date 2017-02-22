@@ -62,7 +62,7 @@ export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 # Enable virtualenvwrapper
-if [ OS == "CentOS7" ]; then
+if [ "$OS" == "CentOS7" ]; then
     source /usr/bin/virtualenvwrapper.sh
 else
     source /usr/local/bin/virtualenvwrapper.sh
