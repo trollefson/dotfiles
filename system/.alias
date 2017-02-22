@@ -1,1 +1,2 @@
 alias ts="tig status"
+alias ls="ls --color=auto"
