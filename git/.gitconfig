@@ -4,5 +4,6 @@
 
 [github]
   user = trollefson
+
 [core]
   excludesfile = ~/.gitignore_global
