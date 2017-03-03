@@ -78,3 +78,6 @@ map <NUL>l :wincmd l<CR>
 
 " map fuzzy finder to ff
 map <leader>ff :FufFile 
+
+" ignore files in NERDTree
+let NERDTreeIgnore = ['\.pyc$']
