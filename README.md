@@ -6,13 +6,10 @@ A few favorite applications are also installed via brew-cask for MacOS installat
 To see what specific packages or applications are installed for your OS please go to `install/<your-distro>` to add or delete packages/applications that will be installed.
 
 ### Installation:
-Run the `install.sh` script
+Supported OS: macOS, CentOS-7, Ubuntu 16.04 LTS, Bash on Ubuntu on Windows 10 Anniversary Edition
+`git clone https://github.com/trollefson/dotfiles.git`
+`bash dotfiles/install.sh`
+update 'dotfiles/git/.gitconfig' with your git information
 
 ### Notes:
 [tmux powerline](https://github.com/erikw/tmux-powerline) requires a powerline friendly font in your terminal
-
-Please change the git/.gitconfig file to reflect your GitHub user info
-
-The vim leader is set to space
-
-The tmux leader is set to ctrl plus space
