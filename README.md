@@ -7,8 +7,11 @@ To see what specific packages or applications are installed for your OS please g
 
 ### Installation:
 Supported OS: macOS, CentOS-7, Ubuntu 16.04 LTS, Bash on Ubuntu on Windows 10 Anniversary Edition
+
 `git clone https://github.com/trollefson/dotfiles.git`
+
 `bash dotfiles/install.sh`
+
 update 'dotfiles/git/.gitconfig' with your git information
 
 ### Notes:
