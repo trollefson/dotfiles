@@ -18,14 +18,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/FuzzyFinder'
-
-" flake8-vim config
-let g:PyFlakeOnWrite = 1
-let g:PyFlakeCheckers = 'pep8,mccabe,frosted'
-let g:PyFlakeDefaultComplexity = 4
-let g:PyFlakeSigns = 1
-let g:PyFlakeMaxLineLength = 120
-let g:PyFlakeCWindow = 0
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
