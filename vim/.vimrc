@@ -73,7 +73,7 @@ map <NUL>l :wincmd l<CR>
 map <leader>ff :FufFile 
 
 " ignore files in NERDTree
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', 'tags']
 
 " hide flake-8 quickfix list
 let g:flake8_show_quickfix = 0
@@ -81,6 +81,6 @@ let g:flake8_show_quickfix = 0
 " syntastic settings
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_loc_list_height=0
