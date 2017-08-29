@@ -1,2 +1,4 @@
 [flake8]
 max-line-length = 100
+flake8_naming_marker=''
+flake8_pyflake_marker=''
