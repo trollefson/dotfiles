@@ -25,7 +25,7 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 
-colorscheme 1989 " set my colorscheme
+colorscheme badwolf " set my colorscheme
 
 syntax enable " allow syntax processing
 filetype indent on " load file type specific formatting
@@ -43,6 +43,7 @@ set foldlevelstart=10 " default expanded folds
 set foldmethod=indent " fold based on identation
 set backspace=indent,eol,start " allow more deletions
 set ruler " show row and column position
+set paste " start in paste mode
 
 let mapleader="\<Space>" " set leader to space
 
