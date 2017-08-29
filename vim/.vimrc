@@ -25,7 +25,7 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 
-colorscheme 1989 " set my colorscheme
+colorscheme badwolf " set my colorscheme
 
 syntax enable " allow syntax processing
 filetype indent on " load file type specific formatting
