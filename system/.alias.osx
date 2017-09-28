@@ -1,2 +1,3 @@
 alias postgres_start="postgres -D /usr/local/var/postgres"
 alias ls="ls -G"
+alias delete_pyc="find . | grep -E '(__pycache__|\.pyc|\.pyo$)' | xargs rm -rf"
