@@ -23,6 +23,7 @@ apps=(
   maven
   postgresql
   python
+  r
   the_silver_searcher
   tig
   tmux

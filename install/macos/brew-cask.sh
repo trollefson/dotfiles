@@ -16,6 +16,7 @@ apps=(
   google-drive
   java
   opera
+  rstudio
   slack
   spotify
   virtualbox
