@@ -79,6 +79,8 @@ let NERDTreeIgnore = ['\.pyc$', 'tags']
 
 " hide flake-8 quickfix list
 let g:flake8_show_quickfix = 0
+let g:flake8_pyflake_marker = ''
+let g:flake8_naming_marker = ''
 
 " syntastic settings
 let g:syntastic_always_populate_loc_list = 0
@@ -86,3 +88,4 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_loc_list_height=0
+let g:syntastic_python_checkers = ['flake8']
