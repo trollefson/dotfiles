@@ -21,6 +21,8 @@ apps=(
   gnu-sed --with-default-names
   grep --with-default-names
   maven
+  mongodb
+  node
   postgresql
   python
   r
