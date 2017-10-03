@@ -1,3 +1,4 @@
 alias postgres_start="postgres -D /usr/local/var/postgres"
+alias mongodb_start="mongod --dbpath /Users/trollefson/Data/mongo/db"
 alias ls="ls -G"
 alias delete_pyc="find . | grep -E '(__pycache__|\.pyc|\.pyo$)' | xargs rm -rf"
