@@ -1,4 +1,5 @@
 alias postgres_start="postgres -D /usr/local/var/postgres"
 alias mongodb_start="mongod --dbpath /Users/trollefson/Data/mongo/db"
+alias redis_start="redis-server /usr/local/etc/redis.conf"
 alias ls="ls -G"
 alias delete_pyc="find . | grep -E '(__pycache__|\.pyc|\.pyo$)' | xargs rm -rf"
