@@ -1,3 +1,3 @@
 alias ts="tig status"
-alias ls="ls --color=auto"
+alias ls="ls -la --color=auto"
 alias delete_pyc="find . | grep -E '(__pycache__|\.pyc|\.pyo$)' | xargs rm -rf"

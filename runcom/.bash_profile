@@ -71,3 +71,6 @@ if [ "$OS" == "CentOS7" ]; then
 else
     source /usr/local/bin/virtualenvwrapper.sh
 fi
+
+# Setting minimum Mac OS Version for clang builds
+export MACOSX_DEPLOYMENT_TARGET=10.14

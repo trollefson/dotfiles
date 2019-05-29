@@ -7,18 +7,12 @@ brew tap caskroom/versions
 # Install packages
 
 apps=(
-  alfred
   colloquy
   firefox
-  flux
   gimp
   google-chrome
-  google-drive
   java
-  opera
   rstudio
-  slack
-  spotify
   virtualbox
 )
 
