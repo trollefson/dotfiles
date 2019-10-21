@@ -16,12 +16,14 @@ apps=(
   cmake
   ctags
   dockutil
+  gdal
   git
   git-extras
   gnu-sed --with-default-names
   grep --with-default-names
   maven
   mongodb
+  netcdf
   node
   postgresql
   python

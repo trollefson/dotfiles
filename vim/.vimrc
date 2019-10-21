@@ -45,6 +45,8 @@ set foldmethod=indent " fold based on identation
 set backspace=indent,eol,start " allow more deletions
 set ruler " show row and column position
 set paste " start in paste mode
+set modelines=0 " avoid https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12735
+set nomodeline " avoid https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12735
 
 let mapleader="\<Space>" " set leader to space
 
@@ -81,7 +83,7 @@ let NERDTreeIgnore = ['\.pyc$', 'tags']
 " syntastic settings
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
 let g:syntastic_loc_list_height=0

@@ -14,6 +14,7 @@ fi
 
 if [ "$OS" == "OSX" ]; then
     READLINK=$(which greadlink)
+    PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 else
     READLINK=$(which readlink)
 fi
@@ -54,14 +55,15 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
 
 # Export
 export OS DOTFILES_DIR EXTRA_DIR
+export WORKON_HOME=$HOME/.virtualenvs
 export EDITOR=vim
 export GIT_EDITOR=vim
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 export HISTFILESIZE=20000
 export HISTSIZE=10000
 export HISTCONTROL=ignoredups:erasedups
-shopt -s histappend
 
+# shopt -s histappend
 # Add git status to tmux powerline
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
@@ -72,5 +74,25 @@ else
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+# Setting PATH for Python 3.6
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 3.6 user installs
+PATH="/Users/trollefson/Library/Python/3.6/bin:${PATH}"
+export PATH
+
 # Setting minimum Mac OS Version for clang builds
 export MACOSX_DEPLOYMENT_TARGET=10.14
+
+# Include gem installs on path
+PATH="/usr/local/lib/ruby/gems/2.6.0/bin/:${PATH}"
+export PATH
+
+# Include sphinx-doc on path
+PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
+export PATH
+
+
+# libarchive-c path
+export LIBARCHIVE=/usr/local/Cellar/libarchive/3.4.0/lib/libarchive.13.dylib
