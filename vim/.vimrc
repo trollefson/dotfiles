@@ -44,7 +44,6 @@ set foldlevelstart=10 " default expanded folds
 set foldmethod=indent " fold based on identation
 set backspace=indent,eol,start " allow more deletions
 set ruler " show row and column position
-set paste " start in paste mode
 set modelines=0 " avoid https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12735
 set nomodeline " avoid https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12735
 
