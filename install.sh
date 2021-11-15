@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Get current dir (so run this script from anywhere)
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -14,14 +12,9 @@ ln -sfv "$DOTFILES_DIR/tmux/.tmux-powerline" ~
 ln -sfv "$DOTFILES_DIR/ctags/.ctags" ~
 
 if [ "$(uname)" == "Darwin" ]; then
-  ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
-  . "$DOTFILES_DIR/install/macos/bash.sh"
-  . "$DOTFILES_DIR/install/macos/npm.sh"
+  ln -sfv "$DOTFILES_DIR/runcom/.zshrc" ~
   . "$DOTFILES_DIR/install/macos/brew.sh"
-  . "$DOTFILES_DIR/install/macos/brew-cask.sh"
-  export JAVA_HOME=$(/usr/libexec/java_home) 
 fi
-
 
 # Install Vim Plugins from vim/.vimrc
 vim +PluginInstall +qall
