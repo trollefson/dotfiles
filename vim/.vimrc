@@ -13,12 +13,9 @@ Plugin 'mhinz/vim-startify'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'nvie/vim-flake8'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'vim-scripts/L9'
-Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
@@ -72,9 +69,6 @@ map <NUL>j :wincmd j<CR>
 map <NUL>k :wincmd k<CR>
 map <NUL>h :wincmd h<CR>
 map <NUL>l :wincmd l<CR>
-
-" map fuzzy finder to ff
-map <leader>ff :FufFile 
 
 " ignore files in NERDTree
 let NERDTreeIgnore = ['\.pyc$', 'tags']
