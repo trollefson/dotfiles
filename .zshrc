@@ -6,6 +6,7 @@ export EDITOR=vim
 export GIT_EDITOR=vim
 export HISTFILESIZE=20000
 export HISTSIZE=10000
+export HISTFILE=~/.zsh_history
 export HISTCONTROL=ignoredups:erasedups
 
 # Configure zsh prompt git integration
@@ -20,3 +21,8 @@ export PROMPT='[%F{cyan}%n %F{magenta}%~%f ${vcs_info_msg_0_}]: '
 
 # Setting minimum Mac OS Version for clang builds
 export MACOSX_DEPLOYMENT_TARGET=10.14
+
+# Reverse search settings
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
