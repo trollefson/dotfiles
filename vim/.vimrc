@@ -10,13 +10,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'mhinz/vim-startify'
-Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'dense-analysis/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,6 +41,7 @@ set backspace=indent,eol,start " allow more deletions
 set ruler " show row and column position
 set modelines=0 " avoid https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12735
 set nomodeline " avoid https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12735
+set re=0 " use new regex engine for syntax highlighting - issue with typescript files
 
 let mapleader="\<Space>" " set leader to space
 
@@ -73,13 +72,7 @@ map <NUL>l :wincmd l<CR>
 " ignore files in NERDTree
 let NERDTreeIgnore = ['\.pyc$', 'tags']
 
-" syntastic settings
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_w = 1
-let g:syntastic_loc_list_height=0
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+" ale configuration
+let g:ale_linters_explicit = 1
+let g:ale_fixers = {'javascript': ['prettier'], 'python': ['black']}
+let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['eslint'], 'python': ['pylint']}
